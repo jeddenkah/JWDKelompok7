@@ -5,10 +5,10 @@
 		<tr>
 			<th id="label-tampil-no ">No</td>
 			<th>ID Transaksi</th>
-			<th>ID Anggota</th>
+			<th>ID Peminjam</th>
 			<th>Nama</th>
-			<th>ID Buku</th>
-			<th>Judul Buku</th>
+			<th>ID Film</th>
+			<th>Judul Film</th>
 			<th>Tanggal Pinjam</th>
 			<th id="label-opsi3">Opsi</th>
 		</tr>
@@ -29,13 +29,13 @@
 		<tr>
 			<td><?php echo $nomor++; ?></td>
 			<td><?php echo $r_transaksi['idtransaksi']; ?></td>
-			<td><?php echo $r_transaksi['idanggota']; ?></td>
+			<td><?php echo $r_transaksi['idpeminjam']; ?></td>
 			<td><?php echo $r_transaksi['nama']; ?></td>
-			<td><?php echo $r_transaksi['idbuku']; ?></td>
-			<td><?php echo $r_transaksi['judulbuku']; ?></td>
+			<td><?php echo $r_transaksi['idfilm']; ?></td>
+			<td><?php echo $r_transaksi['judulfilm']; ?></td>
 			<td><?php echo $r_transaksi['tglpinjam']; ?></td>
 			<td>
-				<a href="cetak/nota-pinjam.php?&id=<?php echo $r_transaksi['idtransaksi'];?>" target="_blank" class="btn btn-success">Cetak Nota</a></div>
+				<!-- <a href="cetak/nota-pinjam.php?&id=<?php echo $r_transaksi['idtransaksi'];?>" target="_blank" class="btn btn-success">Cetak Nota</a></div> -->
 				<a onclick="return confirm('Yakin ingin menghapus data ?')" href="proses/pengembalian-proses.php?&id=<?php echo $r_transaksi['idtransaksi'];?>" class="btn btn-warning">Pengembalian</a></div>
 			</td>
 		</tr>

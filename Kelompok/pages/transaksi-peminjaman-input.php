@@ -120,7 +120,7 @@ $kodeid = $huruf . sprintf("%03s", $urutan);
 		</div>
 
 		<div class="form-floating mb-3">
-			<input type="date" name="tgl_pinjam" class="form-control" id="floatingInputValue" placeholder="name@example.com" required>
+			<input type="date" name="tgl_pinjam" class="form-control" id="floatingInputValue" value="<?php echo $tgl; ?>" placeholder="name@example.com" required>
 			<label for="floatingInputValue">Tanggal Pinjam</label>
 		</div>
 

@@ -8,10 +8,10 @@ $q_transaksi=mysqli_query($db,
 	"SELECT * FROM tbtransaksi WHERE idtransaksi='$id_transaksi'"
 );
 $r_transaksi=mysqli_fetch_array($q_transaksi);
-$id_anggota=$r_transaksi['idanggota'];
-$status_anggota="Tidak Meminjam";
-$id_buku=$r_transaksi['idbuku'];
-$status_buku="Tersedia";
+$id_peminjam=$r_transaksi['idpeminjam'];
+$status_peminjam="Tidak Meminjam";
+$id_film=$r_transaksi['idfilm'];
+$status_film="Tersedia";
 	
 if(isset($_GET['id'])){
 	mysqli_query($db,
@@ -20,14 +20,14 @@ if(isset($_GET['id'])){
 		WHERE idtransaksi='$id_transaksi'"
 	);
 	mysqli_query($db,
-		"UPDATE tbanggota
-		SET status='$status_anggota'
-		WHERE idanggota='$id_anggota'"
+		"UPDATE tbpeminjam
+		SET status='$status_peminjam'
+		WHERE idpeminjam='$id_peminjam'"
 	);
 	mysqli_query($db,
-		"UPDATE tbbuku
-		SET status='$status_buku'
-		WHERE idbuku='$id_buku'"
+		"UPDATE tbfilm
+		SET status='$status_film'
+		WHERE idfilm='$id_film'"
 	);
 	header("location:../index.php?p=transaksi-peminjaman");
 }

@@ -1,6 +1,6 @@
 <?php
 include'../koneksi.php';
-$id_buku=$_GET['id'];
+$id_film=$_GET['id'];
 
 mysqli_query($db,
 	"DELETE FROM tbfilm

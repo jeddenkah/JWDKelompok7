@@ -14,14 +14,14 @@ if(isset($_POST['simpan'])){
 		VALUES('$id_transaksi','$id_anggota','$id_buku','$tgl_pinjam','')"
 	);
 	mysqli_query($db,
-		"UPDATE tbanggota
+		"UPDATE tbpeminjam
 		SET status='$status_anggota'
-		WHERE idanggota='$id_anggota'"
+		WHERE idpeminjam='$id_anggota'"
 	);
 	mysqli_query($db,
-		"UPDATE tbbuku
+		"UPDATE tbfilm
 		SET status='$status_buku'
-		WHERE idbuku='$id_buku'"
+		WHERE idfilm='$id_buku'"
 	);
 	header("location:../index.php?p=transaksi-peminjaman");
 }
