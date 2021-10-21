@@ -41,7 +41,7 @@ $tgl = date('Y-m-d');
 				<div class="position-sticky pt-3">
 					<ul class="nav flex-column">
 						<li class="nav-item">
-							<a class="nav-link <?php echo (strpos($_GET['p'],'beranda')!== false) ? 'active' : ''; ?>" href="index.php?p=beranda">
+							<a class="nav-link " href="index.php?p=beranda">
 								<span data-feather="home"></span> Beranda
 							</a>
 						</li>
@@ -53,17 +53,17 @@ $tgl = date('Y-m-d');
 
 					<ul class="nav flex-column mb-2">
 						<li class="nav-item">
-							<a class="nav-link <?php echo (substr($_GET['p'],0) == 'peminjam') ? 'active' : ''; ?>" href="index.php?p=peminjam">
+							<a class="nav-link " href="index.php?p=peminjam">
 								<span data-feather="file"></span><i class='bx bx-user' style='color:#060606'  ></i> Data Peminjam
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link <?php echo (strpos($_GET['p'],'film')!== false) ? 'active' : ''; ?>" href="index.php?p=film">
+							<a class="nav-link " href="index.php?p=film">
 								<span data-feather="shopping-cart"></span><i class='bx bx-book' style='color:#060606' ></i> Data Film
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link <?php echo (strpos($_GET['p'],'transaksi')!== false) ? 'active' : ''; ?>" href="index.php?p=transaksi-peminjaman">
+							<a class="nav-link " href="index.php?p=transaksi-peminjaman">
 								<span data-feather="users"></span><i class='bx bxs-receipt'></i> Transaksi Peminjaman
 							</a>
 						</li>
