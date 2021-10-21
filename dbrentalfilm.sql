@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 21, 2021 at 10:12 AM
+-- Generation Time: Oct 21, 2021 at 11:28 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.5
 
@@ -50,6 +50,14 @@ CREATE TABLE `tbpeminjam` (
   `status` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `tbpeminjam`
+--
+
+INSERT INTO `tbpeminjam` (`idpeminjam`, `nama`, `jeniskelamin`, `alamat`, `status`) VALUES
+('PM003', 'gasgasgasg', 'Wanita', 'asgasgasg', 'Tidak Meminjam'),
+('PM004', 'asgasgasg', 'Wanita', 'asgasg', 'Tidak Meminjam');
+
 -- --------------------------------------------------------
 
 --
@@ -58,8 +66,8 @@ CREATE TABLE `tbpeminjam` (
 
 CREATE TABLE `tbtransaksi` (
   `idtransaksi` varchar(5) NOT NULL,
-  `idanggota` varchar(5) NOT NULL,
-  `idbuku` varchar(5) NOT NULL,
+  `idpeminjam` varchar(5) NOT NULL,
+  `idfilm` varchar(5) NOT NULL,
   `tglpinjam` date NOT NULL,
   `tglkembali` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

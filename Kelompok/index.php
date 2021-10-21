@@ -53,7 +53,7 @@ $tgl = date('Y-m-d');
 
 					<ul class="nav flex-column mb-2">
 						<li class="nav-item">
-							<a class="nav-link <?php echo (strpos($_GET['p'],'peminjam')!== false) ? 'active' : ''; ?>" href="index.php?p=peminjam">
+							<a class="nav-link <?php echo (substr($_GET['p'],0) == 'peminjam') ? 'active' : ''; ?>" href="index.php?p=peminjam">
 								<span data-feather="file"></span><i class='bx bx-user' style='color:#060606'  ></i> Data Peminjam
 							</a>
 						</li>
