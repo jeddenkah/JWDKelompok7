@@ -102,7 +102,7 @@ $kodeid = $huruf . sprintf("%03s", $urutan);
 		<div class="col-md mb-3">
 			<div class="form-floating">
 				<select name="id_buku" class="form-select" id="floatingSelectGrid" aria-label="Floating label select example" required>
-					<option value="" selected hidden>pilih Data Buku</option>
+					<option value="" selected hidden>Pilih Film</option>
 					<?php
 					$q_tampil_buku = mysqli_query(
 						$db,
@@ -111,7 +111,7 @@ $kodeid = $huruf . sprintf("%03s", $urutan);
 							ORDER BY idfilm"
 					);
 					while ($r_tampil_buku = mysqli_fetch_array($q_tampil_buku)) {
-						echo "<option value=$r_tampil_buku[idfilm]>$r_tampil_buku[idfilm] | $r_tampil_buku[judulbuku]</option>";
+						echo "<option value=$r_tampil_buku[idfilm]>$r_tampil_buku[idfilm] | $r_tampil_buku[judulfilm]</option>";
 					}
 					?>
 				</select>
@@ -125,7 +125,7 @@ $kodeid = $huruf . sprintf("%03s", $urutan);
 		</div>
 
 		<div class="col-12">
-			<button class="btn btn-primary" name="simpan" type="submit">Submit form</button>
+			<button class="btn btn-primary" name="simpan" type="submit">Submit Form</button>
 		</div>
 	</form>
 </div>

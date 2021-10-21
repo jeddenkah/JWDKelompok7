@@ -12,7 +12,7 @@ $urutan = (int) substr($kodeid, 3, 3);
 
 $urutan++;
 
-$huruf = "BK";
+$huruf = "FLM";
 $kodeid = $huruf . sprintf("%03s", $urutan);
 
 ?>
