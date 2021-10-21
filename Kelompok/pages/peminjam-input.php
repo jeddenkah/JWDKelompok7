@@ -1,10 +1,10 @@
 <div id="label-page">
-	<h3 style="text-align: center; margin:10px 0">Input Data Anggota</h3>
+	<h3 style="text-align: center; margin:10px 0">Input Data Peminjam</h3>
 </div>
 
 <?php 
 
-$query = mysqli_query($db, "SELECT max(idanggota) as kodeTerbesar FROM tbanggota");
+$query = mysqli_query($db, "SELECT max(idpeminjam) as kodeTerbesar FROM tbpeminjam");
 $data = mysqli_fetch_array($query);
 $kodeid = $data['kodeTerbesar'];
 
@@ -12,16 +12,16 @@ $urutan = (int) substr($kodeid, 3, 3);
 
 $urutan++;
 
-$huruf = "AG";
+$huruf = "PM";
 $kodeid = $huruf . sprintf("%03s", $urutan);
 
 ?>
 
 <div class="content">
-	<form action="proses/anggota-input-proses.php" method="post">
+	<form action="proses/peminjam-input-proses.php" method="post">
 		<div class="form-floating mb-3">
-			<input readonly type="text" value="<?= $kodeid;?>" name="id_anggota" class="form-control" id="floatingInputValue" placeholder="name@example.com" required>
-			<label for="floatingInputValue">ID Anggota</label>
+			<input readonly type="text" value="<?= $kodeid;?>" name="id_peminjam" class="form-control" id="floatingInputValue" placeholder="name@example.com" required>
+			<label for="floatingInputValue">ID Peminjam</label>
 		</div>
 
 		<div class="form-floating mb-3">
@@ -46,7 +46,7 @@ $kodeid = $huruf . sprintf("%03s", $urutan);
 		</div>
 		
 		<div class="col-12">
-			<button class="btn btn-primary" name="simpan" type="submit">Submit form</button>
+			<button class="btn btn-primary" name="simpan" type="submit">Simpan</button>
 		</div>
 	</form>
 </div>

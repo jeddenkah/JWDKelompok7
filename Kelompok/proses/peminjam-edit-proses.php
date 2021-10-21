@@ -1,7 +1,7 @@
 <?php
 include '../koneksi.php';
 
-$idpeminjam=$_POST['idpeminjam'];
+$id_peminjam=$_POST['id_peminjam'];
 $nama=$_POST['nama'];
 $jeniskelamin=$_POST['jeniskelamin'];
 $alamat=$_POST['alamat'];
@@ -11,8 +11,8 @@ if(isset($_POST['simpan'])){
 	mysqli_query($db,
 		"UPDATE tbpeminjam
 		SET nama='$nama',jeniskelamin='$jeniskelamin',alamat='$alamat',status='$status'
-		WHERE idanggota='$id_anggota'"
+		WHERE idpeminjam='$id_peminjam'"
 	);
-	header("location:../index.php?p=anggota");
+	header("location:../index.php?p=peminjam");
 }
 ?>

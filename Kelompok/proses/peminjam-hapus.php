@@ -1,10 +1,10 @@
 <?php
 include'../koneksi.php';
-$idpeminjam =$_GET['id'];
+$id_peminjam =$_GET['id'];
 
 mysqli_query($db,
-	"DELETE FROM tbanggota
-	WHERE idpeminjam='$idpeminjam'"
+	"DELETE FROM tbpeminjam
+	WHERE idpeminjam='$id_peminjam'"
 );
 header("location:../index.php?p=peminjam");
 ?>

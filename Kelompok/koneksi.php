@@ -1,6 +1,6 @@
 <?php
 
-$server = "127.0.0.1:3307";
+$server = "127.0.0.1:3306";
 $user = "root";
 $password = "";
 $nama_database = "dbrentalfilm";
