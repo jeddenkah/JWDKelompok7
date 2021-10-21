@@ -1,17 +1,17 @@
 <?php
 include'../koneksi.php';
-$id_buku=$_POST['id_buku'];
-$judul_buku=$_POST['judul_buku'];
-$kategori=$_POST['kategori'];
-$pengarang=$_POST['pengarang'];
-$penerbit=$_POST['penerbit'];
+$id_film=$_POST['id_film'];
+$judul_film=$_POST['judul_film'];
+$genre=$_POST['genre'];
+$produser=$_POST['produser'];
+$produksi=$_POST['produksi'];
 $status="Tersedia";
 	
 if(isset($_POST['simpan'])){
 	$sql = 
-		"INSERT INTO tbbuku
-		VALUES('$id_buku','$judul_buku','$kategori','$pengarang','$penerbit','$status')";
+		"INSERT INTO tbfilm
+		VALUES('$id_film','$judul_film','$genre','$produser','$produksi','$status')";
 	$query = mysqli_query($db, $sql);
-	header("location:../index.php?p=buku");
+	header("location:../index.php?p=film");
 }
 ?>
