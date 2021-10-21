@@ -1,9 +1,9 @@
 <?php
 
-$server = "127.0.0.1";
+$server = "127.0.0.1:3307";
 $user = "root";
 $password = "";
-$nama_database = "dbpus";
+$nama_database = "dbrentalfilm";
 
 $db = mysqli_connect($server, $user, $password, $nama_database);
 

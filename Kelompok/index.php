@@ -53,13 +53,13 @@ $tgl = date('Y-m-d');
 
 					<ul class="nav flex-column mb-2">
 						<li class="nav-item">
-							<a class="nav-link" href="index.php?p=anggota">
-								<span data-feather="file"></span><i class='bx bx-user' style='color:#060606'  ></i> Data Anggota
+							<a class="nav-link" href="index.php?p=peminjam">
+								<span data-feather="file"></span><i class='bx bx-user' style='color:#060606'  ></i> Data Peminjam
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="index.php?p=buku">
-								<span data-feather="shopping-cart"></span><i class='bx bx-book' style='color:#060606' ></i> Data Buku
+							<a class="nav-link" href="index.php?p=film">
+								<span data-feather="shopping-cart"></span><i class='bx bx-book' style='color:#060606' ></i> Data Film
 							</a>
 						</li>
 						<li class="nav-item">
