@@ -41,7 +41,7 @@ $tgl = date('Y-m-d');
 				<div class="position-sticky pt-3">
 					<ul class="nav flex-column">
 						<li class="nav-item">
-							<a style= class="nav-link active" href="index.php?p=beranda">
+							<a class="nav-link active" href="index.php?p=beranda">
 								<span data-feather="home"></span> Beranda
 							</a>
 						</li>
