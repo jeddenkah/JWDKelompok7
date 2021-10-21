@@ -82,20 +82,20 @@ $kodeid = $huruf . sprintf("%03s", $urutan);
 		<div class="col-md mb-3">
 			<div class="form-floating">
 				<select name="id_anggota" class="form-select" id="floatingSelectGrid" aria-label="Floating label select example" required>
-					<option value="" selected hidden> Pilih Data Anggota </option>
+					<option value="" selected hidden> Pilih Data Peminjam </option>
 					<?php
 					$q_tampil_anggota = mysqli_query(
 						$db,
-						"SELECT * FROM tbanggota
+						"SELECT * FROM tbpeminjam
 							WHERE status='Tidak Meminjam'
-							ORDER BY idanggota"
+							ORDER BY idpeminjam"
 					);
 					while ($r_tampil_anggota = mysqli_fetch_array($q_tampil_anggota)) {
-						echo "<option value=$r_tampil_anggota[idanggota]>$r_tampil_anggota[idanggota] | $r_tampil_anggota[nama]</option>";
+						echo "<option value=$r_tampil_anggota[idpeminjam]>$r_tampil_anggota[idpeminjam] | $r_tampil_anggota[nama]</option>";
 					}
 					?>
 				</select>
-				<label for="floatingSelectGrid">Anggota</label>
+				<label for="floatingSelectGrid">Peminjam</label>
 			</div>
 		</div>
 
@@ -106,16 +106,16 @@ $kodeid = $huruf . sprintf("%03s", $urutan);
 					<?php
 					$q_tampil_buku = mysqli_query(
 						$db,
-						"SELECT * FROM tbbuku
+						"SELECT * FROM tbfilm
 							WHERE status='Tersedia'
-							ORDER BY idbuku"
+							ORDER BY idfilm"
 					);
 					while ($r_tampil_buku = mysqli_fetch_array($q_tampil_buku)) {
-						echo "<option value=$r_tampil_buku[idbuku]>$r_tampil_buku[idbuku] | $r_tampil_buku[judulbuku]</option>";
+						echo "<option value=$r_tampil_buku[idfilm]>$r_tampil_buku[idfilm] | $r_tampil_buku[judulbuku]</option>";
 					}
 					?>
 				</select>
-				<label for="floatingSelectGrid">Buku</label>
+				<label for="floatingSelectGrid">Film</label>
 			</div>
 		</div>
 

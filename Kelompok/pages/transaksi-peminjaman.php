@@ -14,10 +14,10 @@
 		</tr>
 		<?php
 
-		$sql="SELECT tbtransaksi.*,tbanggota.*,tbbuku.*
-		FROM tbtransaksi,tbanggota,tbbuku
-		WHERE tbtransaksi.idanggota=tbanggota.idanggota
-		AND tbtransaksi.idbuku=tbbuku.idbuku
+		$sql="SELECT tbtransaksi.*,tbpeminjam.*,tbfilm.*
+		FROM tbtransaksi,tbpeminjam,tbfilm
+		WHERE tbtransaksi.idpeminjam=tbpeminjam.idpeminjam
+		AND tbtransaksi.idfilm=tbfilm.idfilm
 		AND tbtransaksi.tglkembali='0000-00-00'
 		ORDER BY tbtransaksi.idtransaksi DESC";
 		
